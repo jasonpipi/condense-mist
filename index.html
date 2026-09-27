@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#192232">
+  <title>Condense | Jianuo Xuan</title>
+  <link rel="stylesheet" href="web/static/style.css">
+  <script src="browser-model.js"></script>
+  <script defer src="web/static/app.js"></script>
+</head>
+<body>
+<div id="model-status" role="status" style="position:fixed;z-index:10;top:18px;left:20px;right:20px;color:#e2e4e2;font:12px/1.5 sans-serif;text-align:center;pointer-events:none">First word loads the language model (~84 MB). Please allow a moment.</div>
+<main id="fog-writing" aria-label="Words on a misted window">
+  <video hidden muted loop playsinline preload="auto" src="web/static/media/background.mp4" aria-hidden="true"></video>
+  <canvas role="img" aria-label="A misted window with hand-drawn flowers"></canvas>
+  <form method="post" autocomplete="off">
+    <input name="word" aria-label="Write an English word, up to 20 letters" placeholder="What would you like to write?" spellcheck="false" autocapitalize="off" autocomplete="off" required>
+    <button class="fw-submit" type="submit" aria-label="Find related words"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 10 4 15l5 5M4 15h11a4 4 0 0 0 4-4V4"/></svg></button>
+  </form>
+  <button class="fw-reset" type="button" aria-label="Start again" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6"/></svg></button>
+  <div class="fw-message" role="status" aria-live="polite"></div>
+  <span class="fw-loading" aria-hidden="true"></span>
+  <button class="fw-sound" type="button" aria-label="Mute sound" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="sound-waves" d="M15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14"/><path class="sound-slash" d="m16 9 5 6m0-6-5 6"/></svg></button>
+  <svg width="0" height="0" aria-hidden="true" class="fw-path-container"><g class="fw-paths"></g></svg>
+  <noscript>Please enable JavaScript to experience Condense.</noscript>
+</main>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Visual credits — fog-hopper demo
+
+Water material: RainEffect, Lucas Bebber / Codrops (2015).
+https://github.com/codrops/RainEffect
+https://tympanus.net/codrops/licensing/
+Original water fragment shader and droplet sprites retained. Animation lifecycle, density and sizes adapted for this prototype.
+
+Background: AI-generated original Hopper-inspired night diner painting, saved as hopper-street.jpg. Art direction: restrained oil-painted city corner at night, petrol greens and nearly black blue, warm yellow diner light, sienna brick, quiet figures and wet-street reflections; no interface and no foreground fog. Glass and typography are rendered separately.
