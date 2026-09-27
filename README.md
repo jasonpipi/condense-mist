@@ -3,8 +3,7 @@
 
 An AI-assisted word-association artwork for Quantitative Aesthetics. Type a word, watch seven associations emerge as marks on glass, then let them fade.
 
-**Live experience:** https://jasonpipi.github.io/condense-mist/  
-**Project booklet:** [Condense.pdf](Condense.pdf)
+**Live experience:** https://jasonpipi.github.io/condense-mist/
 
 ## Experience
 
@@ -47,7 +46,6 @@ Publish the `main` branch, root folder, in Settings > Pages. No paid backend or 
 - `web/`: shared interface, artwork, video and audio.
 - `browser-model.js`, `model-worker.js`: browser loading and cosine search.
 - `model/`: full normalized float32 GloVe vectors in five chunks and vocabulary.
-- `Condense.pdf`: illustrated project description.
 
 ## Credits and limitations
 
