@@ -1,0 +1,29 @@
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#192232;color:#f2efea;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+#fog-writing{position:relative;isolation:isolate;overflow:hidden;width:100%;height:100svh;min-height:540px;background:#192735}
+#fog-writing canvas{position:absolute;inset:0;width:100%;height:100%;cursor:crosshair;touch-action:none}
+#fog-writing form{position:absolute;bottom:max(35px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:min(260px,80%);height:46px;display:flex;align-items:center;border:1px solid #ffffff2b;border-radius:16px;background:#ffffff0d;backdrop-filter:blur(20px);transition:border-color .2s,box-shadow .2s}
+#fog-writing input{min-width:0;flex:1;width:calc(100% - 46px);height:44px;padding:8px 4px 8px 18px;border:0;border-radius:14px;background:transparent;box-shadow:none;color:#eef3efbf;outline:none;font:300 16px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.7px;text-align:center}
+#fog-writing input::placeholder{font-weight:300;font-size:11px;letter-spacing:.15px;color:#eef3ef80;opacity:1}
+#fog-writing form:focus-within{border-color:#ffffff65;box-shadow:0 0 0 2px #ffffff0a}
+#fog-writing button{border:0;background:transparent;color:#fffef5dc;cursor:pointer;display:flex;align-items:center;justify-content:center}
+#fog-writing .fw-submit{flex:0 0 46px;width:46px;height:46px;border-radius:15px;padding:0}
+#fog-writing button svg{width:22px;height:22px}
+#fog-writing button:focus-visible{outline:1px solid #fff9;outline-offset:2px}
+#fog-writing .fw-reset{position:absolute;right:max(24px,env(safe-area-inset-right));bottom:max(25px,env(safe-area-inset-bottom));width:46px;height:46px;border-radius:50%}
+#fog-writing .fw-message{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+#fog-writing .fw-message.is-error{width:auto;height:auto;clip-path:none;white-space:normal;left:24px;right:24px;bottom:91px;text-align:center;color:#eee7de;font-size:12px}
+#fog-writing .fw-path-container{position:absolute;pointer-events:none}
+#fog-writing [hidden]{display:none!important}
+.fw-loading{position:absolute;left:calc(50% - 3px);bottom:54px;width:6px;height:6px;border-radius:50%;background:#fff9;opacity:0;pointer-events:none}
+.is-loading .fw-loading{animation:breathe 2s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:.8;transform:scale(1.1)}}
+#fog-writing form.fw-limit{animation:fw-limit .42s ease-out}
+@keyframes fw-limit{0%,100%{transform:translateX(-50%);box-shadow:0 0 0 #fff0}20%{transform:translateX(calc(-50% - 5px));background:#ffffff38;box-shadow:0 0 18px #ffffff65}40%{transform:translateX(calc(-50% + 5px))}60%{transform:translateX(calc(-50% - 3px))}80%{transform:translateX(calc(-50% + 2px))}}
+@media(prefers-reduced-motion:reduce){#fog-writing form.fw-limit{animation:fw-flash .42s ease-out}.is-loading .fw-loading{animation:none;opacity:.65}@keyframes fw-flash{40%{background:#ffffff38;box-shadow:0 0 18px #ffffff65}}}
+.no-script{position:relative;max-width:550px;margin:0 auto;padding:36px;line-height:1.8}
+#fog-writing .fw-sound{position:absolute;left:20px;bottom:max(25px,env(safe-area-inset-bottom));width:44px;height:44px;border-radius:50%;opacity:.58}
+#fog-writing .fw-sound svg{width:18px;height:18px}
+.fw-sound .sound-slash{display:none}.fw-sound.is-muted .sound-slash{display:block}.fw-sound.is-muted .sound-waves{display:none}
+#fog-writing form.fw-return{animation:fw-return 1.1s ease-out}
+@keyframes fw-return{from{opacity:0;filter:blur(4px)}to{opacity:1;filter:blur(0)}}
+@media(prefers-reduced-motion:reduce){#fog-writing form.fw-return{animation:none}}
